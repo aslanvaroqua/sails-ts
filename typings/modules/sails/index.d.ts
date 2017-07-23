@@ -8,11 +8,6 @@ export interface Thenable <R> {
   then <U> (onFulfilled?: (value: R) => U | Thenable<U>, onRejected?: (error: any) => void): Thenable<U>;
 }
 
-export class Welcome {
-
-
-  Welcome(something): void;
-}
 
 export class Promise <R> implements Thenable <R> {
   /**
@@ -2009,11 +2004,7 @@ namespace sails {
      * @websocket
      */
     badRequest(data?: any, pathToView?: string): void;
-    /**
-     * @http
-     * @websocket
-     */
-    ok(data?: any, pathToView?: string): void;
+
     /**
      * @http
      * @websocket

@@ -1,5 +1,5 @@
 export class Welcome {
-  private attributes: any = {
+   attributes: any = {
     id: {
       type: 'integer',
       primaryKey: true
