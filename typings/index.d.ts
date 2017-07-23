@@ -4,5 +4,6 @@
 /// <reference path="modules/bluebird/index.d.ts" />
 /// <reference path="modules/connect/index.d.ts" />
 /// <reference path="modules/express-serve-static-core/index.d.ts" />
+/// <reference path="modules/express/index.d.ts" />
 /// <reference path="modules/sails/index.d.ts" />
 /// <reference path="modules/serve-static/index.d.ts" />

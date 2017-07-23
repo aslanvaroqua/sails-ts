@@ -6,6 +6,7 @@
   "keywords": [],
   "dependencies": {
     "ejs": "2.3.4",
+    "express": "^4.15.3",
     "grunt": "1.0.1",
     "grunt-contrib-clean": "1.0.0",
     "grunt-contrib-coffee": "1.0.0",
@@ -22,7 +23,11 @@
     "rc": "1.0.1",
     "sails": "~0.12.13",
     "sails-disk": "~0.10.9",
-    "typed-sails": "^1.0.2"
+    "sails-generate-controller-ts": "^0.0.1",
+    "ts-node": "^3.2.1",
+    "typed-sails": "^1.0.2",
+    "typescript": "^2.4.2",
+    "util": "^0.10.3"
   },
   "scripts": {
     "debug": "node debug app.js",
