@@ -32,7 +32,8 @@
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "nyc mocha"
   },
   "main": "app.js",
   "repository": {
@@ -53,7 +54,6 @@
     "@types/serve-static": "^1.7.31",
     "@types/socket.io": "^1.4.29",
     "chai": "^4.1.0",
-    "mocha": "^3.4.2",
     "ts-node": "^3.2.1"
   }
 }
