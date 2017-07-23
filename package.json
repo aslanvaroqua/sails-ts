@@ -24,6 +24,7 @@
     "sails": "~0.12.13",
     "sails-disk": "~0.10.9",
     "sails-generate-controller-ts": "^0.0.1",
+    "sails-mongo": "^0.12.2",
     "ts-node": "^3.2.1",
     "typed-sails": "^1.0.2",
     "typescript": "^2.4.2",

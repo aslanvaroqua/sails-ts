@@ -14,7 +14,17 @@ declare var sails: any;
 const WelcomeController = {
 	index: function (req: e.Request, res: e.Response, next: Function) {
     console.log('index() from WelcomeController.ts');
-		res.status(200).send('Welcome to sails');
+    sails.models.welcome
+      .find({
+      })
+      .limit(1)
+      .then(welcome => {
+          res.status(200).send(welcome);
+      })
+      .catch(err => {
+        res.status(200).send(err);
+      })
+
 	},
   config: function (req: e.Request, res:e.Response, next:Function) {
     console.log('config() from WelcomeController.ts');

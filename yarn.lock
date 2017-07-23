@@ -89,7 +89,7 @@
     utils-merge "1.0.0"
     vary "~1.0.1"
 
-"@sailshq/lodash@^3.10.2":
+"@sailshq/lodash@3.10.2", "@sailshq/lodash@^3.10.2":
   version "3.10.2"
   resolved "https://registry.npmjs.org/@sailshq/lodash/-/lodash-3.10.2.tgz#1567d47345364c2c2e2077bc113487b1dfe62154"
 
@@ -363,6 +363,10 @@ browserify-zlib@^0.1.4:
   resolved "https://registry.npmjs.org/browserify-zlib/-/browserify-zlib-0.1.4.tgz#bb35f8a519f600e0fa6b8485241c979d0141fb2d"
   dependencies:
     pako "~0.2.0"
+
+bson@~0.4.23:
+  version "0.4.23"
+  resolved "https://registry.npmjs.org/bson/-/bson-0.4.23.tgz#e65a2e3c7507ffade4109bc7575a76e50f8da915"
 
 builtin-modules@^1.0.0:
   version "1.1.1"
@@ -925,6 +929,10 @@ errorhandler@~1.4.2:
   dependencies:
     accepts "~1.3.0"
     escape-html "~1.0.3"
+
+es6-promise@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.npmjs.org/es6-promise/-/es6-promise-3.0.2.tgz#010d5858423a5f118979665f46486a95c6ee2bb6"
 
 escape-html@1.0.2:
   version "1.0.2"
@@ -2030,6 +2038,21 @@ mock-res@0.3.0:
   version "0.3.0"
   resolved "https://registry.npmjs.org/mock-res/-/mock-res-0.3.0.tgz#0c2034cc6336d0595a3af109f7448283ee9c47f5"
 
+mongodb-core@1.3.20:
+  version "1.3.20"
+  resolved "https://registry.npmjs.org/mongodb-core/-/mongodb-core-1.3.20.tgz#7bab2f91c608f1e86055fd999ae28e4173d98507"
+  dependencies:
+    bson "~0.4.23"
+    require_optional "~1.0.0"
+
+mongodb@2.1.20:
+  version "2.1.20"
+  resolved "https://registry.npmjs.org/mongodb/-/mongodb-2.1.20.tgz#3a6ca32f8150bcc6d0b962bd804d61032bfb8787"
+  dependencies:
+    es6-promise "3.0.2"
+    mongodb-core "1.3.20"
+    readable-stream "1.0.31"
+
 morgan@~1.6.1:
   version "1.6.1"
   resolved "https://registry.npmjs.org/morgan/-/morgan-1.6.1.tgz#5fd818398c6819cba28a7cd6664f292fe1c0bbf2"
@@ -2412,6 +2435,15 @@ read@1.0.x:
   dependencies:
     mute-stream "~0.0.4"
 
+readable-stream@1.0.31:
+  version "1.0.31"
+  resolved "https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.31.tgz#8f2502e0bc9e3b0da1b94520aabb4e2603ecafae"
+  dependencies:
+    core-util-is "~1.0.0"
+    inherits "~2.0.1"
+    isarray "0.0.1"
+    string_decoder "~0.10.x"
+
 readable-stream@^2.2.2:
   version "2.3.3"
   resolved "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.3.tgz#368f2512d79f9d46fdfc71349ae7878bbc1eb95c"
@@ -2485,6 +2517,17 @@ request@^2.51.0:
     tough-cookie "~2.3.0"
     tunnel-agent "^0.6.0"
     uuid "^3.0.0"
+
+require_optional@~1.0.0:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/require_optional/-/require_optional-1.0.1.tgz#4cf35a4247f64ca3df8c2ef208cc494b1ca8fc2e"
+  dependencies:
+    resolve-from "^2.0.0"
+    semver "^5.1.0"
+
+resolve-from@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/resolve-from/-/resolve-from-2.0.0.tgz#9480ab20e94ffa1d9e80a804c7ea147611966b57"
 
 resolve@~1.1.0:
   version "1.1.7"
@@ -2711,6 +2754,17 @@ sails-hook-sockets@^0.13.9:
     socket.io "1.7.3"
     uid2 "0.0.3"
 
+sails-mongo@^0.12.2:
+  version "0.12.2"
+  resolved "https://registry.npmjs.org/sails-mongo/-/sails-mongo-0.12.2.tgz#475b9e508d380f8787a0e6b1dfebbd607f4f66e3"
+  dependencies:
+    "@sailshq/lodash" "3.10.2"
+    async "2.0.1"
+    mongodb "2.1.20"
+    validator "4.5.1"
+    waterline-cursor "0.0.7"
+    waterline-errors "0.10.1"
+
 sails-stringfile@~0.3.2:
   version "0.3.2"
   resolved "https://registry.npmjs.org/sails-stringfile/-/sails-stringfile-0.3.2.tgz#da4e3666a8f9cfd3e1f346bfb8116a303e1c30bd"
@@ -2809,7 +2863,7 @@ scandirectory@^2.5.0:
     safefs "^3.1.2"
     taskgroup "^4.0.5"
 
-"semver@2 || 3 || 4 || 5":
+"semver@2 || 3 || 4 || 5", semver@^5.1.0:
   version "5.3.0"
   resolved "https://registry.npmjs.org/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
 
@@ -3413,6 +3467,10 @@ validator@4.4.0:
   version "4.4.0"
   resolved "https://registry.npmjs.org/validator/-/validator-4.4.0.tgz#35e29555dd5f7826f970a4eaecff9e6df6df3da6"
 
+validator@4.5.1:
+  version "4.5.1"
+  resolved "https://registry.npmjs.org/validator/-/validator-4.5.1.tgz#40ae97630ee52cd96f437f0d49a9daab5c0b1baf"
+
 validator@~3.41.2:
   version "3.41.3"
   resolved "https://registry.npmjs.org/validator/-/validator-3.41.3.tgz#bd214a4f7372db32ba78b899525f5f91adb3d217"
@@ -3466,14 +3524,14 @@ waterline-criteria@~1.0.1:
   dependencies:
     lodash "3.10.1"
 
-waterline-cursor@~0.0.6:
+waterline-cursor@0.0.7, waterline-cursor@~0.0.6:
   version "0.0.7"
   resolved "https://registry.npmjs.org/waterline-cursor/-/waterline-cursor-0.0.7.tgz#ccd9cfed661d94af6027495942b5fa27ad65feb3"
   dependencies:
     async "1.5.2"
     lodash "3.10.1"
 
-waterline-errors@~0.10.1:
+waterline-errors@0.10.1, waterline-errors@~0.10.1:
   version "0.10.1"
   resolved "https://registry.npmjs.org/waterline-errors/-/waterline-errors-0.10.1.tgz#ee63632aadde993271b7514b7ca98d9fd5b86a2e"
 
